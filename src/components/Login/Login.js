@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init'
 import './Login.css'
 
 const Login = () => {
+    const navigate = useNavigate();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [
@@ -14,7 +16,9 @@ const Login = () => {
         error,
       ] = useSignInWithEmailAndPassword(auth);
 
-    
+    if(user){
+        navigate('/');
+    }
     const getEmail = (e) =>{
         setEmail(e.target.value);
         console.log("email:",email);
@@ -27,6 +31,11 @@ const Login = () => {
         event.preventDefault();
         signInWithEmailAndPassword(email,password);
     }
+
+    // const handleLoginWithGoogle = () =>{
+    //     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+    //     signInWithGoogle();
+    // }
 
     return (
             <Form onSubmit={handleLogin} className='d-flex flex-column align-items-center justify-content-center login'>
@@ -42,8 +51,8 @@ const Login = () => {
                     <Form.Label>Password</Form.Label>
                     <Form.Control type="password" onBlur={getPassword} placeholder="Password" required/>
                 </Form.Group>
-                <p className='text-danger'></p>
-                
+                <p className='text-danger'>{error?.message}</p>
+                {loading && <p>Loading...</p>}
                 <div>
                     <Button variant="primary" type="submit">
                         Submit

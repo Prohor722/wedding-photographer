@@ -1,22 +1,33 @@
 import React from 'react';
+import { Button, Form } from 'react-bootstrap';
 
 const Booking = () => {
     return (
-        <div>
-            <h4>Book for an Event</h4>
-            <div className='d-flex flex-column align-items-center justify-content-center login'>
-                <h2>Register Please</h2>
-                <label htmlFor="name"></label>
-                <input type="text" placeholder='Enter your name'/>
-                <label htmlFor="email"></label>
-                <input type="email" placeholder='Enter your email'/>
-                <label htmlFor="pass"></label>
-                <input type="password" placeholder='Enter password'/>
-                <label htmlFor="cpass"></label>
-                <input type="password" placeholder='Enter password again'/>
-                <button>Register</button>
-            </div>
-        </div>
+        <Form className='d-flex flex-column align-items-center justify-content-center login'>
+                <Form.Group className="mb-3" controlId="formBasicDate">
+                    <Form.Label>Event Date</Form.Label>
+                    <Form.Control type="date" placeholder="Enter date" required/>
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicDays">
+                    <Form.Label>Number of Days</Form.Label>
+                    <Form.Control type="number" placeholder="Enter number of days" required/>
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicLocation">
+                    <Form.Label>Location</Form.Label>
+                    <Form.Control type="text" placeholder="Enter Event Location" required/>
+                </Form.Group>
+
+                <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control type="password" placeholder="Password" required/>
+                </Form.Group>
+            
+                <Button variant="primary" type="submit">
+                    Submit
+                </Button>
+            </Form>
     );
 };
 

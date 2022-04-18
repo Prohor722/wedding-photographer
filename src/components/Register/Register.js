@@ -65,6 +65,7 @@ const Register = () => {
                     <Form.Control type="password" onBlur={getConfirmPassword} placeholder="Enter Password Again" required/>
                 </Form.Group>
                 <p className='text-danger'>{error.cpass}</p>
+                {loading && <p>Loading....</p>}
                 
                 <Button variant="primary" type="submit">
                     Submit
