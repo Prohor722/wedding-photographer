@@ -1,3 +1,13 @@
+.banner-text-area{
+    background-color: rgba(223, 223, 223, 0.568);
+}
+.banner-header{
+    /* font-size: 70px; */
+    color: rgba(70, 15, 15, 0.603);
+}
+.banner-header:hover{
+    color: rgb(70, 15, 15);
+}
 .banner>img{
     max-height: 600px;
 }

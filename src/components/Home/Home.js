@@ -13,21 +13,29 @@ const Home = () => {
     return (
         <div>
             <div className='banner-area row g-0'>
-                <div className='col-md-8 d-flex flex-column align-items-center justify-content-center'>
-                    <h1>PhotoGallery</h1>
+                <div className='col-md-8 d-flex flex-column align-items-center justify-content-center banner-text-area'>
+                    <h1 className='banner-header display-1'>PhotoGallery</h1>
                     <p>making your dream wedding into reality...</p>
                 </div>
                 <div className='banner col-md-4'>
-                    <img className='img-fluid shadow' src="https://sanskritiweddings.com/storage/couple/6HDBMCosf3Vg0565pnGxTkgHmhyUY9y5yFg3HYcU.jpg" alt="weddingImage"/>
+                    <img className='img-fluid' src="https://sanskritiweddings.com/storage/couple/6HDBMCosf3Vg0565pnGxTkgHmhyUY9y5yFg3HYcU.jpg" alt="weddingImage"/>
                 </div>
             </div>
 
-            <h3 className='mt-5'>Services</h3>
+            <div className='row g-0 mt-5'>
+                <div className='col-md-5'>
+                    <hr />
+                </div>
+                <div className='col-md-2'>
+                    <h3>Services</h3>
+                </div>
+                <div className='col-md-5'>
+                    <hr />
+                </div>
+            </div>
+
             <div className="services d-flex justify-content-center row row-cols-md-3 g-0 mt-3">
                 {services.map(service=><Service key={service.id} service={service}></Service>)}
-                {/* <Service></Service>
-                <Service></Service>
-                <Service></Service> */}
             </div>
 
 

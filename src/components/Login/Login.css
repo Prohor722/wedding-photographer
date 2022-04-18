@@ -1,0 +1,22 @@
+.login{
+    margin-top: 70px;
+    margin-bottom: 132px;
+}
+.login input{
+    width: 400px;
+    padding: 10px;
+    margin: 20px 0;
+    border: 2px solid rgb(1, 173, 1);
+}
+.login button{
+    padding: 10px 178px;
+    border: 2px solid rgb(1, 173, 1);
+    color: rgb(1, 173, 1);
+    background-color: white;
+}
+.login button:hover{
+    padding: 10px 178px;
+    border: 2px solid rgb(1, 173, 1);
+    color: white;
+    background-color: rgb(1, 173, 1);
+}

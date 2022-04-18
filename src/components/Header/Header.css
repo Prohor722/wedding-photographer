@@ -1,13 +1,13 @@
 .nav{
-    height: 70px;
-    background-color: rgb(245, 245, 245);
+    height: 95px;
+    background-color: rgba(82, 2, 2, 0.719);
 }
 .nav a{
      text-decoration: none;
-     color: rgb(66, 66, 66);
+     color: rgb(255, 255, 255);
      padding-right: 20px;
      font-weight:500;
 }
 .nav a:hover{
-    color: rgb(1, 55, 173);
+    color: rgb(255, 171, 60);
 }
