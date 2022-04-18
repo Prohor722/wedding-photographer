@@ -1,0 +1,13 @@
+.nav{
+    height: 70px;
+    background-color: rgb(245, 245, 245);
+}
+.nav a{
+     text-decoration: none;
+     color: rgb(66, 66, 66);
+     padding-right: 20px;
+     font-weight:500;
+}
+.nav a:hover{
+    color: rgb(1, 55, 173);
+}
