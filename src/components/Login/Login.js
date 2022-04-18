@@ -34,10 +34,11 @@ const Login = () => {
         signInWithEmailAndPassword(email,password);
     }
 
-    // const handleLoginWithGoogle = () =>{
-    //     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-    //     signInWithGoogle();
-    // }
+    const [signInWithGoogle] = useSignInWithGoogle(auth);
+
+    const googleLogin = () =>{
+        signInWithGoogle();
+    }
 
     return (
             <Form onSubmit={handleLogin} className='d-flex flex-column align-items-center justify-content-center login'>
@@ -59,7 +60,7 @@ const Login = () => {
                     <Button variant="primary" type="submit">
                         Submit
                     </Button>
-                    <img type="button" className='google-icon' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4mqpyZlsPfnmFCjSux93QSWqnSFuuIgcfHDD8-1V6pfqoxw6om3CycNnuttpIt40aYQ0&usqp=CAU" alt="googleIcon"/>
+                    <img type="button" onClick={googleLogin} className='google-icon' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4mqpyZlsPfnmFCjSux93QSWqnSFuuIgcfHDD8-1V6pfqoxw6om3CycNnuttpIt40aYQ0&usqp=CAU" alt="googleIcon"/>
                     <Link to="/reset">Reset Password?</Link>
                     <br/>
                     <Link to="/register">Register</Link>
