@@ -39,6 +39,24 @@ const Home = () => {
             </div>
 
 
+            <div className='row g-0 mt-5'>
+                <div className='col-md-5'>
+                    <hr />
+                </div>
+                <div className='col-md-2'>
+                    <h3>Contact US</h3>
+                </div>
+                <div className='col-md-5'>
+                    <hr />
+                </div>
+            </div>
+            <div className='bg-dark text-light text-center p-5 mb-5'>
+                <h4>Email</h4>
+                <h5>prohor.b722@gmail.com</h5>
+                <h4>Social Links</h4>
+                facebook : Prohor Banik
+            </div>
+
         </div>
     );
 };
