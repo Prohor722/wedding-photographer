@@ -16,7 +16,7 @@ const Header = () => {
             <Link to="/">Home</Link>
             <Link to="/about">About</Link>
             {(user)? 
-                <a onClick={logout}>Logout</a>:
+                <a className='logout' onClick={logout}>Logout</a>:
                 <div>
                     <Link to="/login">Login</Link>
                     <Link to="/register">Register</Link>
