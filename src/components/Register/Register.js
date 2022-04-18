@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
-import { useNavigate } from 'react-router-dom';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification } from 'react-firebase-hooks/auth';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init'
 
 const Register = () => {
     const [createUserWithEmailAndPassword,user,loading ] = useCreateUserWithEmailAndPassword(auth);
     const navigate =  useNavigate();
+
+    const [sendEmailVerification] = useSendEmailVerification(auth);
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -41,6 +43,7 @@ const Register = () => {
         setError(e);
         if(!error.password && !error.cpass){
             createUserWithEmailAndPassword(email,password);
+            sendEmailVerification(email)
         }
     }
     return (
@@ -70,6 +73,10 @@ const Register = () => {
                 <Button variant="primary" type="submit">
                     Submit
                 </Button>
+                
+                <Link to="/reset">Reset Password?</Link>
+                <br/>
+                <Link to="/register">Register</Link>
             </Form>
         </div>
     );

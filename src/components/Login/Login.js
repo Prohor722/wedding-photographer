@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init'
 import './Login.css'
 
@@ -60,6 +60,9 @@ const Login = () => {
                         Submit
                     </Button>
                     <img type="button" className='google-icon' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4mqpyZlsPfnmFCjSux93QSWqnSFuuIgcfHDD8-1V6pfqoxw6om3CycNnuttpIt40aYQ0&usqp=CAU" alt="googleIcon"/>
+                    <Link to="/reset">Reset Password?</Link>
+                    <br/>
+                    <Link to="/register">Register</Link>
                 </div>
             </Form>
     );
