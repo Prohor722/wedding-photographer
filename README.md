@@ -1,8 +1,8 @@
 # PhotoGallery [Live link](https://github.com/facebook/create-react-app).
 
 Features:
-*Login & Registration
-*Multipage Routing
+Markup : * Login & Registration
+Markup : * Multipage Routing
 *Password Reset
 *Login Access
 
