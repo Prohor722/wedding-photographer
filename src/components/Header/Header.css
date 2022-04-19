@@ -1,13 +1,22 @@
 .nav{
     height: 95px;
-    background-color: rgba(82, 2, 2, 0.719);
+    background-color: rgba(39, 39, 39, 0.877);
 }
 .nav a{
      text-decoration: none;
-     color: rgb(255, 255, 255);
+     color: rgb(219, 219, 219);
      padding-right: 20px;
      font-weight:500;
 }
 .nav a:hover{
     color: rgb(255, 171, 60);
+}
+.logout{
+    background-color: rgba(39, 39, 39, 0);
+    border: 2px solid rgba(39, 39, 39, 0);
+    color: rgb(219, 219, 219) ;
+    font-weight:700;
+}
+.logout:hover{
+    color: rgb(255, 81, 37);
 }
