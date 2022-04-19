@@ -4,7 +4,7 @@ import './Footer.css'
 const Footer = () => {
     return (
         <div className='footer d-flex justify-content-center align-items-center'>
-            <p>CopyRight @2025</p>
+            <p>CopyRight © 2025 Prohor. All rights reserved</p>
         </div>
     );
 };

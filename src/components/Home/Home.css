@@ -11,3 +11,8 @@
 .banner>img{
     max-height: 600px;
 }
+.images img{
+    height: 180px;
+    width: 180px;
+    border-radius: 90px;
+}
