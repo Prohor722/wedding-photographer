@@ -11,11 +11,7 @@ const ResetPassword = () => {
         setEmail(e.target.value);
         console.log("email:",email);
     }
-    const handleReset = (event) => {
-        event.preventDefault();
-        sendPasswordResetEmail(email);
-        alert("Mail has been sent!!");
-    }
+    
     return (
         <div>
             <Form className='d-flex flex-column align-items-center justify-content-center login'>

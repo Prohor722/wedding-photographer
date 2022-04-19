@@ -1,3 +1,4 @@
+import { hover } from '@testing-library/user-event/dist/hover';
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
@@ -17,27 +18,37 @@ const Login = () => {
         loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
-
+    console.log(from);
+    // redirect to home or previous location after login
     if(user){
         navigate(from, {replace: true});
     }
+    // getting email address
     const getEmail = (e) =>{
         setEmail(e.target.value);
         console.log("email:",email);
     }
+    // getting password
     const getPassword = (e) =>{
         setPassword(e.target.value)
         console.log("password:",password);}
 
+    //login process
     const handleLogin = (event) =>{
         event.preventDefault();
         signInWithEmailAndPassword(email,password);
     }
 
-    const [signInWithGoogle] = useSignInWithGoogle(auth);
-
+    //google sign in option 
+    const [signInWithGoogle, googleUser] = useSignInWithGoogle(auth);
+    if(googleUser) 
+    {
+        navigate(from, {replace:true});
+    }
+    
     const googleLogin = () =>{
         signInWithGoogle();
+        console.log(googleUser);
     }
 
     return (
@@ -58,9 +69,13 @@ const Login = () => {
                 {loading && <p>Loading...</p>}
                 <div>
                     <Button variant="primary" type="submit">
-                        Submit
+                        Login
                     </Button>
+
+                    {/* google login button  */}
                     <img type="button" onClick={googleLogin} className='google-icon' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4mqpyZlsPfnmFCjSux93QSWqnSFuuIgcfHDD8-1V6pfqoxw6om3CycNnuttpIt40aYQ0&usqp=CAU" alt="googleIcon"/>
+
+                    
                     <Link to="/reset">Reset Password?</Link>
                     <br/>
                     <Link to="/register">Register</Link>

@@ -1,9 +1,16 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const Booking = () => {
+    const navigate = useNavigate();
+    const handleSubmit = (event) =>{
+        event.preventDefault();
+        alert("Booking Done!");
+        navigate('/');
+    }
     return (
-        <Form className='d-flex flex-column align-items-center justify-content-center login'>
+        <Form onSubmit={handleSubmit} className='d-flex flex-column align-items-center justify-content-center login'>
                 <Form.Group className="mb-3" controlId="formBasicDate">
                     <Form.Label>Event Date</Form.Label>
                     <Form.Control type="date" placeholder="Enter date" required/>

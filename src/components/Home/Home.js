@@ -41,7 +41,7 @@ const Home = () => {
                 {services.map(service=><Service key={service.id} service={service}></Service>)}
             </div>
 
-
+            {/* Custom Section  */}
             <div className='row g-0 mt-5'>
                 <div className='col-md-5'>
                     <hr />
@@ -59,10 +59,8 @@ const Home = () => {
                     <img src="https://cdn0.weddingwire.in/articles/images/9/0/8/6/img_16809/t30_creative-wedding-photography-avinash-dhoundhiyal-photography-lead-image.jpg" alt=""/>
                     <img src="https://1.bp.blogspot.com/-NclPuAAJSv8/XT_WAQWqLhI/AAAAAAAABuQ/L7XjkojIsrwl74zvdVU3kN5Si13612dZwCLcBGAs/s1600/professional-wedding%2B-photography.jpg" alt=""/>
                 </div>
-                <h4 className='mt-3'>Email</h4>
-                <h5>prohor.b722@gmail.com</h5>
-                <h4>Social Links</h4>
-                facebook : Prohor Banik
+                <p className='mt-5'>Email: prohor.b722@gmail.com</p>
+                <p>facebook : Prohor Banik</p>
             </div>
 
         </div>

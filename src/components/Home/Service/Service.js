@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import './Service.css'
 
 const Service = ({service}) => {
-    const { id, title, price, des, img } = service;
-    console.log(id);
+    const {  title, price, des, img } = service;
     return (
         <div className='service shadow'>
             <img src={img} alt="serviceImage" className='img-fluid' />

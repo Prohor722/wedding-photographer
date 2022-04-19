@@ -12,6 +12,7 @@ import Booking from './components/Booking/Booking';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import Blog from './components/Blog/Blog';
 import ResetPassword from './components/ResetPassword/ResetPassword';
+import Loading from './components/Loading';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
         <Route path="/blog" element={<Blog/>}></Route>
+        {/* <Route path="/loading" element={<Loading/>}></Route> */}
         <Route path="/reset" element={<ResetPassword/>}></Route>
         <Route path="/booking" element={
           <RequireAuth>

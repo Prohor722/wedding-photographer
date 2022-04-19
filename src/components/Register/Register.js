@@ -74,7 +74,7 @@ const Register = () => {
                 {loading && <p>Loading....</p>}
                 
                 <Button variant="primary" type="submit">
-                    Submit
+                    Register
                 </Button>
                 
                 <Link to="/reset">Reset Password?</Link>

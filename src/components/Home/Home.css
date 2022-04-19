@@ -1,16 +1,19 @@
+/* banner section */
 .banner-text-area{
     background-color: rgba(223, 223, 223, 0.568);
 }
+/* Banner text */
 .banner-header{
-    /* font-size: 70px; */
     color: rgba(70, 15, 15, 0.603);
 }
 .banner-header:hover{
     color: rgb(70, 15, 15);
 }
+/* banner image */
 .banner>img{
     max-height: 600px;
 }
+/* contact us section */
 .images img{
     height: 180px;
     width: 180px;
