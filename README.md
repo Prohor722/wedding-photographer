@@ -1,24 +1,30 @@
 # PhotoGallery [Live link](https://github.com/facebook/create-react-app).
 
-- Item 1
-- Item 2
-- Item 3
-  - Sub Item 1
-  - Sub Item 2
-   
-#^ two spaces
-
-* Item 1
-* Item 2
-* Item 3
-  * Sub Item A
-  * Sub Item B
-
 Features:
-Markup : * Login & Registration
-Markup : * Multipage Routing
-*Password Reset
-*Login Access
+- Login & Registration
+- Multipage Routing
+- Password Reset
+- Login Access
+- Google Login
+- Email Verification
+
+
+Technologies:
+
+- React
+- Firebase
+- React Firebase Hook 
+- React Router
+- React Bootstrap
+
+
+
+
+
+
+
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
