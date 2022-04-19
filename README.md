@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# PhotoGallery [Live link](https://github.com/facebook/create-react-app).
+
+Features:
+*Login & Registration
+*Multipage Routing
+*Password Reset
+*Login Access
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
