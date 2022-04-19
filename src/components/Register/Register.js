@@ -5,10 +5,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init'
 
 const Register = () => {
-    const [createUserWithEmailAndPassword,user,loading ] = useCreateUserWithEmailAndPassword(auth);
-    const navigate =  useNavigate();
 
-    const [sendEmailVerification] = useSendEmailVerification(auth);
+    //create or register function
+    const [createUserWithEmailAndPassword,user,loading ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
+    const navigate =  useNavigate();
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -19,18 +19,22 @@ const Register = () => {
         navigate('/');
     }
 
+    //function to get email 
     const getEmail = (e) =>{
         setEmail(e.target.value);
         console.log("email:",email);
     }
+    //function to get password 
     const getPassword = (e) =>{
         setPassword(e.target.value)
         console.log("password:",password);
     }
+    //function to get confirm password 
     const getConfirmPassword = (e) =>{
         setConfirmPassword(e.target.value)
         console.log("confirm password:",confirmPassword);
     }
+    //register function
     const handleRegister = event =>{
         event.preventDefault();
         const e = {};
@@ -43,7 +47,6 @@ const Register = () => {
         setError(e);
         if(!error.password && !error.cpass){
             createUserWithEmailAndPassword(email,password);
-            sendEmailVerification(email)
         }
     }
     return (
@@ -76,7 +79,7 @@ const Register = () => {
                 
                 <Link to="/reset">Reset Password?</Link>
                 <br/>
-                <Link to="/register">Register</Link>
+                <Link to="/login">Login</Link>
             </Form>
         </div>
     );
